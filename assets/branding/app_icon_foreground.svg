@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="cloth" x1="280" y1="275" x2="727" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a3fff0"/>
+      <stop offset=".45" stop-color="#6de5eb"/>
+      <stop offset="1" stop-color="#a994ff"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="216" y1="294" x2="810" y2="738" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7cf5e8"/>
+      <stop offset="1" stop-color="#a48dff"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="453" y1="410" x2="574" y2="564" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d8fffd"/>
+    </linearGradient>
+  </defs>
+  <!-- The partial viewfinder and the garment remain legible at launcher sizes. -->
+  <path d="M228 386v-55c0-20 12-31 32-31h51M796 654v55c0 20-12 31-32 31h-51"
+        fill="none" stroke="url(#frame)" stroke-width="19" stroke-linecap="round" opacity=".75"/>
+  <path d="M377 316 303 350c-7 3-11 9-15 15l-40 73c-6 11-3 17 7 23l55 32c9 5 16 4 23-4l17-20v211c0 13 8 20 20 20h284c12 0 20-7 20-20V469l17 20c7 8 14 9 23 4l55-32c10-6 13-12 7-23l-40-73c-4-6-8-12-15-15l-74-34-58-22c-8-3-15 0-19 8-12 26-31 42-58 42s-46-16-58-42c-4-8-11-11-19-8z"
+        fill="url(#cloth)"/>
+  <path d="M512 416c5 0 8 3 10 10l8 27c3 10 10 17 20 20l27 8c7 2 10 5 10 10s-3 8-10 10l-27 8c-10 3-17 10-20 20l-8 27c-2 7-5 10-10 10s-8-3-10-10l-8-27c-3-10-10-17-20-20l-27-8c-7-2-10-5-10-10s3-8 10-10l27-8c10-3 17-10 20-20l8-27c2-7 5-10 10-10z"
+        fill="url(#shine)"/>
+  <path d="M735 251c3 0 5 2 6 6l5 16c2 6 6 10 12 12l16 5c4 1 6 3 6 6s-2 5-6 6l-16 5c-6 2-10 6-12 12l-5 16c-1 4-3 6-6 6s-5-2-6-6l-5-16c-2-6-6-10-12-12l-16-5c-4-1-6-3-6-6s2-5 6-6l16-5c6-2 10-6 12-12l5-16c1-4 3-6 6-6z"
+        fill="#c4fff7"/>
+</svg>

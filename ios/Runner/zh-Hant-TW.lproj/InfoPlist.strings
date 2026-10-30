@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "試衣間";
+"NSCameraUsageDescription" = "用於即時展示服裝試穿效果，影片將傳送至 Decart 處理。";
+"NSPhotoLibraryUsageDescription" = "用於選擇想要試穿的服裝圖片。";

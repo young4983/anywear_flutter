@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Fitting Room";
+"NSCameraUsageDescription" = "Camera video is used to show your virtual try-on and is sent to Decart for processing.";
+"NSPhotoLibraryUsageDescription" = "Photo access lets you choose a garment image to try on.";
