@@ -8,7 +8,7 @@
 
 基于 Decart Lucy VTON 实时试衣接口开发的双端 MVP。它是一套独立 Flutter 客户端，不是官方 Anywear Chrome 插件的源码转换，也不包含云端模型权重。
 
-当前验证：29 项 Flutter 测试通过，静态分析无问题；Android 真机记录见 `VALIDATION.md`。iOS 工程已配置，但本机 Xcode 的 Swift 版本不满足 Decart 要求，尚未完成 iOS 原生构建。
+当前验证：29 项 Flutter 测试通过，静态分析无问题；Android 真机和 iOS 原生构建记录见 `VALIDATION.md`。iOS 原生构建使用 Xcode 26.1.1 / Swift 6.2.1，GitHub Actions 已配置无签名 debug 编译检查。
 
 ## 截图
 
@@ -37,7 +37,11 @@
 | iOS | iOS 17+，Mac + Swift 6.2.1+ 工具链（如 Xcode 26.1+），Swift Package Manager |
 | 设备 | 实时相机试衣需真机；iOS 模拟器无法验证相机 |
 
-`pubspec.yaml` 已在项目级启用 Swift Package Manager，无需修改全局 Flutter 设置。
+`pubspec.yaml` 已在项目级启用 Swift Package Manager，无需修改全局 Flutter 设置。Decart iOS SDK 要求 Swift 6.2.1+，请使用 Xcode 26.1.1 或更高版本；若机器安装了多个 Xcode，构建前选择对应版本：
+
+```bash
+sudo xcode-select --switch /Applications/Xcode-26.1.1.app/Contents/Developer
+```
 
 ## Riverpod 状态管理
 
@@ -136,7 +140,7 @@ flutter build appbundle --release --dart-define-from-file=config/production.json
 flutter build ipa --release --dart-define-from-file=config/production.json
 ```
 
-当前 Android release 仍使用模板的 debug 签名，需在正式分发前配置自己的上传密钥。当前 Bundle ID 为 `com.example.fitting_room` / `com.example.fittingRoom`，也需要替换。
+当前 Android release 仍使用模板的 debug 签名，需在正式分发前配置自己的上传密钥。当前 Bundle ID 为 `com.example.fitting_room` / `com.example.fittingRoom`，也需要替换。iOS debug 构建已完成无签名验证；真机运行仍需在 Xcode 中配置开发 Team 和唯一 Bundle ID。
 
 ## 源码与授权
 

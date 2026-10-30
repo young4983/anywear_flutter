@@ -2,6 +2,13 @@
 
 > `work/` 中的截图、日志和构建缓存是本机验证产物，默认不随仓库上传。README 使用的公开截图位于仓库根目录和 `docs/screenshots/`。
 
+## 2026-10-30：Xcode 26.1.1 与 iOS 原生构建
+
+- 本机已安装 Xcode 26.1.1（Build 17B100），其 Swift 编译器为 6.2.1，满足 Decart `decart-ios` 0.6.10 的工具链要求。
+- 本机使用新版 Xcode 完成 Swift Package Manager 依赖解析，`decart-ios` 0.6.10、LiveKit 2.16.0 及 Flutter 生成的 Swift 包均成功解析；此前的 `incompatible tools version (6.2.1)` 错误不再出现。
+- GitHub Actions 已配置使用 Xcode 26.1.1、Flutter 3.44.9 执行 `flutter build ios --debug --no-codesign`，用于完成完整 iOS 原生编译验证。
+- 当前 Intel Mac 尚未安装 iOS 26.1 Simulator Runtime；本轮验证关注原生编译，未启动模拟器或验证相机。iOS 实时试衣仍需 iOS 17+ 真机。
+
 ## 2026-10-30：三语言国际化
 
 - 新增简体中文、繁体中文（台湾）和英文 ARB 目录；应用启动时按系统首选语言解析：`zh-CN`/简体映射 `zh`，`zh-TW` 或 `Hant` 映射 `zh-TW`，其他语言映射 `en`。

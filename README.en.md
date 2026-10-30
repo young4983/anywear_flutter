@@ -26,7 +26,7 @@ The screenshot is from a real Android debug build. Video quality, latency, and c
 | --- | --- |
 | Flutter / Dart | Flutter 3.44+ / Dart 3.12+ |
 | Android | API 24+, Java 17, AGP 9, Android SDK 36+ |
-| iOS | iOS 17+, Swift 6.2.1+ (for example Xcode 26.1+), Swift Package Manager |
+| iOS | iOS 17+, Swift 6.2.1+ (Xcode 26.1.1+), Swift Package Manager |
 | Device | A physical device is required for realtime camera try-on |
 
 ## Local setup
@@ -74,7 +74,11 @@ python3 -m unittest discover -s backend -v
 flutter build apk --debug
 ```
 
-See [`VALIDATION.md`](VALIDATION.md) for the current device and toolchain results. The iOS build requires a Swift toolchain compatible with Decart's native SDK.
+See [`VALIDATION.md`](VALIDATION.md) for the current device and toolchain results. GitHub Actions checks the unsigned iOS debug build with Xcode 26.1.1 / Swift 6.2.1. If multiple Xcodes are installed locally, select the required toolchain before building:
+
+```bash
+sudo xcode-select --switch /Applications/Xcode-26.1.1.app/Contents/Developer
+```
 
 ## Repository layout
 
