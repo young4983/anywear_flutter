@@ -4,6 +4,7 @@
 .idea/
 build/
 work/
+docs/github-publishing.md
 coverage/
 config/local.json
 config/production.json
