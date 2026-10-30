@@ -74,7 +74,7 @@ python3 -m unittest discover -s backend -v
 flutter build apk --debug
 ```
 
-See [`VALIDATION.md`](VALIDATION.md) for the current device and toolchain results. GitHub Actions checks the unsigned iOS debug build with Xcode 26.1.1 / Swift 6.2.1. If multiple Xcodes are installed locally, select the required toolchain before building:
+See [`VALIDATION.md`](VALIDATION.md) for the current device and toolchain results. The unsigned iOS debug build passed in GitHub Actions with Xcode 26.1.1 / Swift 6.2.1. If multiple Xcodes are installed locally, select the required toolchain before building:
 
 ```bash
 sudo xcode-select --switch /Applications/Xcode-26.1.1.app/Contents/Developer

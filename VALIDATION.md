@@ -6,7 +6,7 @@
 
 - 本机已安装 Xcode 26.1.1（Build 17B100），其 Swift 编译器为 6.2.1，满足 Decart `decart-ios` 0.6.10 的工具链要求。
 - 本机使用新版 Xcode 完成 Swift Package Manager 依赖解析，`decart-ios` 0.6.10、LiveKit 2.16.0 及 Flutter 生成的 Swift 包均成功解析；此前的 `incompatible tools version (6.2.1)` 错误不再出现。
-- GitHub Actions 已配置使用 Xcode 26.1.1、Flutter 3.44.9 执行 `flutter build ios --debug --no-codesign`，用于完成完整 iOS 原生编译验证。
+- GitHub Actions run [41028917562](https://github.com/young4983/anywear_flutter/actions/runs/41028917562) 已使用 Xcode 26.1.1、Flutter 3.44.9 执行 `flutter build ios --debug --no-codesign` 并通过；同一运行中的 Flutter、Android 和 iOS jobs 均成功。
 - 当前 Intel Mac 尚未安装 iOS 26.1 Simulator Runtime；本轮验证关注原生编译，未启动模拟器或验证相机。iOS 实时试衣仍需 iOS 17+ 真机。
 
 ## 2026-10-30：三语言国际化

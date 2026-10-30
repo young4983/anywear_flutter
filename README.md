@@ -8,7 +8,7 @@
 
 基于 Decart Lucy VTON 实时试衣接口开发的双端 MVP。它是一套独立 Flutter 客户端，不是官方 Anywear Chrome 插件的源码转换，也不包含云端模型权重。
 
-当前验证：29 项 Flutter 测试通过，静态分析无问题；Android 真机和 iOS 原生构建记录见 `VALIDATION.md`。iOS 原生构建使用 Xcode 26.1.1 / Swift 6.2.1，GitHub Actions 已配置无签名 debug 编译检查。
+当前验证：29 项 Flutter 测试通过，静态分析无问题；Android 真机和 iOS 原生构建记录见 `VALIDATION.md`。iOS 原生构建已使用 Xcode 26.1.1 / Swift 6.2.1 在 GitHub Actions 通过无签名 debug 编译。
 
 ## 截图
 
